@@ -165,6 +165,7 @@ def main():
     chimp = Chimp()
     fist = Fist()
     allsprites = pygame.sprite.LayeredDirty((fist, chimp))
+    allsprites.clear(screen, background)
 
 # Main Loop
     going = True
