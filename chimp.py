@@ -169,7 +169,7 @@ def main():
     punch_sound = load_sound('punch.wav')
     chimp = Chimp()
     fist = Fist()
-    allsprites = pygame.sprite.LayeredDirty((fist, chimp))
+    allsprites = pygame.sprite.LayeredDirty((chimp, fist))
     allsprites.clear(screen, background)
 
 # Main Loop
