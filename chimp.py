@@ -197,7 +197,6 @@ def main():
         allsprites.update()
 
         # Draw Everything
-        screen.blit(background, (0, 0))
         rects = allsprites.draw(screen)
         pygame.display.update(rects)
 
