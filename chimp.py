@@ -68,6 +68,7 @@ class Fist(pygame.sprite.DirtySprite):
         self.rect.midtop = pos
         if self.punching:
             self.rect.move_ip(5, 10)
+        self.dirty = 1
 
     def punch(self, target):
         "returns true if the fist collides with the target"
@@ -100,6 +101,7 @@ class Chimp(pygame.sprite.DirtySprite):
             self._spin()
         else:
             self._walk()
+        self.dirty = 1
 
     def _walk(self):
         "move the monkey across the screen, and turn at the ends"
