@@ -190,8 +190,8 @@ def main():
 
         # Draw Everything
         screen.blit(background, (0, 0))
-        allsprites.draw(screen)
-        pygame.display.flip()
+        rects = allsprites.draw(screen)
+        pygame.display.update(rects)
 
     pygame.quit()
 
