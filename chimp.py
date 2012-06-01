@@ -84,6 +84,7 @@ class Fist(pygame.sprite.DirtySprite):
     def unpunch(self):
         "called to pull the fist back"
         self.punching = 0
+        self.move()  # reset to mouse's position
 
 
 class Chimp(pygame.sprite.DirtySprite):
