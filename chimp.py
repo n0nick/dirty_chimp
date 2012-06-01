@@ -191,6 +191,8 @@ def main():
                     whiff_sound.play()  # miss
             elif event.type == MOUSEBUTTONUP:
                 fist.unpunch()
+            elif event.type == MOUSEMOTION:
+                fist.move()
 
         allsprites.update()
 
