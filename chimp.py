@@ -62,13 +62,17 @@ class Fist(pygame.sprite.DirtySprite):
         self.image, self.rect = load_image('fist.bmp', -1)
         self.punching = 0
 
-    def update(self):
+    def move(self):
         "move the fist based on the mouse position"
         pos = pygame.mouse.get_pos()
         self.rect.midtop = pos
+        self.dirty = 1
+
+    def update(self):
+        "handle the punching fist position"
         if self.punching:
             self.rect.move_ip(5, 10)
-        self.dirty = 1
+            self.dirty = 1
 
     def punch(self, target):
         "returns true if the fist collides with the target"
