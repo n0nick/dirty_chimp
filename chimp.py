@@ -54,11 +54,11 @@ def load_sound(name):
 
 
 # classes for our game objects
-class Fist(pygame.sprite.Sprite):
+class Fist(pygame.sprite.DirtySprite):
     """moves a clenched fist on the screen, following the mouse"""
     def __init__(self):
-        # call Sprite initializer
-        pygame.sprite.Sprite.__init__(self)
+        # call DirtySprite initializer
+        pygame.sprite.DirtySprite.__init__(self)
         self.image, self.rect = load_image('fist.bmp', -1)
         self.punching = 0
 
@@ -81,12 +81,12 @@ class Fist(pygame.sprite.Sprite):
         self.punching = 0
 
 
-class Chimp(pygame.sprite.Sprite):
+class Chimp(pygame.sprite.DirtySprite):
     """moves a monkey critter across the screen. it can spin the
        monkey when it is punched."""
     def __init__(self):
-        # call Sprite initializer
-        pygame.sprite.Sprite.__init__(self)
+        # call DirtySprite initializer
+        pygame.sprite.DirtySprite.__init__(self)
         self.image, self.rect = load_image('chimp.bmp', -1)
         screen = pygame.display.get_surface()
         self.area = screen.get_rect()
