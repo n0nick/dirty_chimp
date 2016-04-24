@@ -159,10 +159,6 @@ def main():
         textpos = text.get_rect(centerx=background.get_width() / 2)
         background.blit(text, textpos)
 
-# Display The Background
-    screen.blit(background, (0, 0))
-    pygame.display.flip()
-
 # Prepare Game Objects
     clock = pygame.time.Clock()
     whiff_sound = load_sound('whiff.wav')
@@ -170,6 +166,8 @@ def main():
     chimp = Chimp()
     fist = Fist()
     allsprites = pygame.sprite.LayeredDirty((chimp, fist))
+
+# Display the background
     allsprites.clear(screen, background)
 
 # Main Loop
